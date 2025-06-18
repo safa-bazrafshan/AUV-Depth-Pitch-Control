@@ -1,58 +1,64 @@
-# 🚢 AUV Control Project – Depth and Attitude Control with PID, LQR, and SMC
+# AUV Control Systems Project
 
-This repository contains a structured simulation study on the control of an Autonomous Underwater Vehicle (AUV) in MATLAB/Simulink, aiming to design and evaluate robust controllers for depth and attitude tracking under various conditions.
-
----
-
-## 📌 Project Overview
-
-We model and simulate an underwater vehicle (AUV) with the goal of maintaining depth and pitch/yaw angles accurately. Three phases are included, each progressively implementing more advanced control strategies and increasing model complexity.
+This repository contains a progressive exploration of control strategies for Autonomous Underwater Vehicles (AUVs), implemented and simulated in MATLAB. The project is divided into four main phases, each demonstrating increasing complexity and control robustness.
 
 ---
 
-## 📘 Phase 1: Linear Model – PID and LQR Control
+## 📌 Phase 1: Classical PID Controller
 
-In this phase, we developed and tested:
-- A PD controller for pitch angle.
-- A PID controller for depth control.
-- An LQR controller to achieve optimal state-feedback performance.
+- Implemented basic depth control using a PID controller.
+- Simulations were performed with and without external disturbances (e.g., water currents).
+- Stability, response time, and disturbance rejection were evaluated.
 
-Simulations were conducted both with and without external disturbances (e.g., water current).
-
-📄 [PDF Report – Phase 1](AUV_Control_Phase1_PID_LQR.pdf)
+📄 Report: AUV_Control_Phase1_PID.pdf
 
 ---
 
-## ⚙️ Phase 2: Sliding Mode Controller (SMC) – Linear Model
+## 📌 Phase 2: Sliding Mode Control (SMC)
 
-Here, we designed an SMC controller for the linearized AUV model, with a focus on robustness and fast convergence.
+- Introduced SMC for robust nonlinear control under uncertain dynamics.
+- Compared system performance to PID control.
+- Simulated system behavior under disturbance conditions.
 
-- The controller shows strong resistance to matched disturbances.
-- Depth tracking remains accurate even with dynamic environmental effects.
-
-📄 [PDF Report – Phase 2](AUV_Control_Phase2_SMC.pdf)
+📄 Report: AUV_Control_Phase2_SMC.pdf
 
 ---
 
-## 🌊 Phase 3: SMC Controller – Nonlinear Model
+## 📌 Phase 3: Full-State Nonlinear Modeling + LQR
 
-In the final phase, we applied Sliding Mode Control to the nonlinear AUV dynamics, providing more realistic system behavior.
+- Developed a full nonlinear model of the AUV including pitch, yaw, and depth dynamics.
+- Designed and implemented an LQR controller for state feedback.
+- Analyzed the system’s multi-axis behavior and control effectiveness.
 
-- The controller tracks constant and time-varying depth commands under nonlinear dynamics.
-- Disturbances are considered in a more realistic framework.
+📄 Report: AUV_Control_Phase3_Nonlinear_LQR.pdf
 
-📄 [PDF Report – Phase 3](AUV_Control_Phase3_SMC_Nonlinear.pdf)
+---
+
+## 📌 Phase 4: Fuzzy Logic Controller
+
+- Implemented a fuzzy logic controller for depth regulation.
+- Explored intelligent control approaches for smoother, adaptive performance.
+- Focused on mimicking human decision-making under nonlinearity and uncertainty.
+
+📄 Report: AUV_Control_Phase4_Fuzzy.pdf
+
+---
+
+## 🚀 Future Work
+
+- Integration of adaptive control and machine learning.
+- Real-time simulation and hardware-in-the-loop testing.
+- Publishing results in academic venues.
 
 ---
 
 ## 🛠 Tools Used
 
-- MATLAB R2023 or later
-- Simulink (optional)
+- MATLAB / Simulink
 - Control Systems Toolbox
+- Custom nonlinear dynamic modeling
 
 ---
-
 
 
 ## ⭐️ If you found this helpful...
