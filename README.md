@@ -1,46 +1,86 @@
-# Autonomous Underwater Vehicle (AUV) Control Project
+# 🛠️ AUV Control Project – Six Phases of Advanced Controller Design
 
-This repository contains the simulation and control design for an AUV using different control strategies across multiple development phases. Each phase builds upon the previous one to improve stability, accuracy, and robustness of the underwater vehicle.
-
-## ✅ Project Phases Overview
-
-### 🔹 Phase 1 – Mathematical Modeling and Linearization
-- Developed a mathematical model of the AUV’s depth, pitch, and yaw dynamics.
-- Linearized the nonlinear model around an operating point.
-
-### 🔹 Phase 2 – LQR Controller Design
-- Designed an LQR controller based on the linearized model.
-- Simulated the closed-loop system and evaluated system response.
-- 📄 [AUV_Control_Phase2_SMC.pdf](AUV_Control_Phase2_SMC.pdf)
-
-### 🔹 Phase 3 – Sliding Mode Controller (SMC)
-- Implemented a Sliding Mode Controller (SMC) on the nonlinear model.
-- Demonstrated robust performance in the presence of model uncertainties.
-- 📄 [AUV_Control_Phase3_SMC.pdf](AUV_Control_Phase3_SMC.pdf)
-
-### 🔹 Phase 4 – Fuzzy Logic Controller (FLC)
-- Designed a Fuzzy Logic Controller for AUV depth control.
-- Observed improved settling time and less overshoot.
-- 📄 [AUV_Control_Phase4_FLC.pdf](AUV_Control_Phase4_FLC.pdf)
-
-### 🔹 Phase 5 – Adaptive Neuro-Fuzzy Inference System (ANFIS)
-- Trained an ANFIS controller using generated simulation data.
-- Achieved minimal RMSE and smooth trajectory tracking.
-- 📄 [AUV_Control_Phase5_ANFIS.pdf](AUV_Control_Phase5_ANFIS.pdf)
+This repository contains the simulation and implementation of advanced control strategies for an Autonomous Underwater Vehicle (AUV) in MATLAB/Simulink. The project is divided into six progressive phases, each introducing a new control technique with increasing complexity and robustness.
 
 ---
 
-## 🛠 Tools & Environment
-- MATLAB / Simulink
-- Control System Toolbox
+## 📂 Project Structure
+
+Each phase includes:
+- MATLAB codes (.m files)
+- Simulation results (figures)
+- Documentation (PDF report)
+
+---
+
+## 📌 Phase Overview
+
+### ✅ Phase 1: Open-Loop System Analysis
+- Description: Simulation of the AUV's nonlinear model without any controller.
+- Purpose: To observe the natural dynamics of the system and its instability.
+- Output: Uncontrolled depth and pitch responses showing divergence from desired states.
+
+---
+
+### ✅ Phase 2: Sliding Mode Controller (SMC)
+- Description: Implementation of a basic SMC to control the AUV's depth.
+- Features: Robustness to parameter uncertainties and matched disturbances.
+- Output: Smooth convergence of depth to desired value.
+
+---
+
+### ✅ Phase 3: Sliding Mode Controller with Disturbance
+- Description: SMC with external disturbance applied to evaluate robustness.
+- Output: Despite disturbance, controller successfully tracks desired depth.
+
+---
+
+### ✅ Phase 4: Fuzzy Controller
+- Description: Design and simulation of a fuzzy logic–based controller.
+- Purpose: Introduce human-like reasoning to handle system nonlinearities.
+- Output: Smooth depth tracking with reduced overshoot compared to SMC.
+
+---
+
+### ✅ Phase 5: Adaptive Neuro-Fuzzy Inference System (ANFIS)
+- Description: Data-driven controller using ANFIS trained on input-output data.
+- Features: Combines neural learning with fuzzy logic for adaptive control.
+- Output: High tracking accuracy with very low RMSE during training.
+
+---
+
+### ✅ Phase 6: Model Reference Adaptive Control (MRAC)
+- Description: Implementation of MRAC where the AUV follows a reference model.
+- Features: Online adaptation of control parameters based on tracking error.
+- Output: Adaptive convergence to reference output with damped oscillations.
+
+---
+
+## 📘 Documentation
+
+Each phase has its own detailed PDF report:
+- Phase 1–6 PDF files are included in this repository.
+- Figures and analysis are embedded in the documents.
+
+---
+
+## 💻 Requirements
+
+- MATLAB R2021a or newer
 - Fuzzy Logic Toolbox
-- Optimization Toolbox
+- Control System Toolbox
+- (Optional) Simulink for full visual simulation
 
 ---
 
-## ⭐️ If you found this helpful...
+## 🤝 Contribution
 
-Feel free to star ⭐️ the repo, share, or contribute improvements!
+Feel free to fork the project, explore new controllers (e.g., LQR, MPC), or test on 6-DOF AUV models.
+
+---
+
+
+## 🌊 Dive into AUV control – from basics to intelligence!
 
 ## 👤 Author
 
