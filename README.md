@@ -56,10 +56,23 @@ Each phase includes:
 
 ---
 
+### ✅ Phase 7 - LQR Controller
+
+This phase introduces the use of a Linear Quadratic Regulator (LQR) to control the depth of the AUV based on a linearized system model. The LQR controller minimizes a quadratic cost function to achieve optimal control.
+
+- ✅ Gain matrix K was computed using MATLAB's lqr function.
+- ✅ The closed-loop response shows excellent stability and zero steady-state error.
+- ✅ The system output follows a flat line at zero, indicating rapid convergence.
+
+📎 PDF Report: AUV_Control_Phase7_LQR.pdf  
+🖼️ Simulation Figure: AUV_Phase7_LQR_Response.png
+
+---
+
 ## 📘 Documentation
 
 Each phase has its own detailed PDF report:
-- Phase 1–6 PDF files are included in this repository.
+- Phase 1–7 PDF files are included in this repository.
 - Figures and analysis are embedded in the documents.
 
 ---
