@@ -1,65 +1,42 @@
-# AUV Control Systems Project
+# Autonomous Underwater Vehicle (AUV) Control Project
 
-This repository contains a progressive exploration of control strategies for Autonomous Underwater Vehicles (AUVs), implemented and simulated in MATLAB. The project is divided into four main phases, each demonstrating increasing complexity and control robustness.
+This repository contains the simulation and control design for an AUV using different control strategies across multiple development phases. Each phase builds upon the previous one to improve stability, accuracy, and robustness of the underwater vehicle.
 
----
+## ✅ Project Phases Overview
 
-## 📌 Phase 1: Classical PID Controller
+### 🔹 Phase 1 – Mathematical Modeling and Linearization
+- Developed a mathematical model of the AUV’s depth, pitch, and yaw dynamics.
+- Linearized the nonlinear model around an operating point.
 
-- Implemented basic depth control using a PID controller.
-- Simulations were performed with and without external disturbances (e.g., water currents).
-- Stability, response time, and disturbance rejection were evaluated.
+### 🔹 Phase 2 – LQR Controller Design
+- Designed an LQR controller based on the linearized model.
+- Simulated the closed-loop system and evaluated system response.
+- 📄 [AUV_Control_Phase2_SMC.pdf](AUV_Control_Phase2_SMC.pdf)
 
-📄 Report: AUV_Control_Phase1_PID.pdf
+### 🔹 Phase 3 – Sliding Mode Controller (SMC)
+- Implemented a Sliding Mode Controller (SMC) on the nonlinear model.
+- Demonstrated robust performance in the presence of model uncertainties.
+- 📄 [AUV_Control_Phase3_SMC.pdf](AUV_Control_Phase3_SMC.pdf)
 
----
+### 🔹 Phase 4 – Fuzzy Logic Controller (FLC)
+- Designed a Fuzzy Logic Controller for AUV depth control.
+- Observed improved settling time and less overshoot.
+- 📄 [AUV_Control_Phase4_FLC.pdf](AUV_Control_Phase4_FLC.pdf)
 
-## 📌 Phase 2: Sliding Mode Control (SMC)
-
-- Introduced SMC for robust nonlinear control under uncertain dynamics.
-- Compared system performance to PID control.
-- Simulated system behavior under disturbance conditions.
-
-📄 Report: AUV_Control_Phase2_SMC.pdf
-
----
-
-## 📌 Phase 3: Full-State Nonlinear Modeling + LQR
-
-- Developed a full nonlinear model of the AUV including pitch, yaw, and depth dynamics.
-- Designed and implemented an LQR controller for state feedback.
-- Analyzed the system’s multi-axis behavior and control effectiveness.
-
-📄 Report: AUV_Control_Phase3_Nonlinear_LQR.pdf
+### 🔹 Phase 5 – Adaptive Neuro-Fuzzy Inference System (ANFIS)
+- Trained an ANFIS controller using generated simulation data.
+- Achieved minimal RMSE and smooth trajectory tracking.
+- 📄 [AUV_Control_Phase5_ANFIS.pdf](AUV_Control_Phase5_ANFIS.pdf)
 
 ---
 
-## 📌 Phase 4: Fuzzy Logic Controller
-
-- Implemented a fuzzy logic controller for depth regulation.
-- Explored intelligent control approaches for smoother, adaptive performance.
-- Focused on mimicking human decision-making under nonlinearity and uncertainty.
-
-📄 Report: AUV_Control_Phase4_Fuzzy.pdf
-
----
-
-## 🚀 Future Work
-
-- Integration of adaptive control and machine learning.
-- Real-time simulation and hardware-in-the-loop testing.
-- Publishing results in academic venues.
-
----
-
-## 🛠 Tools Used
-
+## 🛠 Tools & Environment
 - MATLAB / Simulink
-- Control Systems Toolbox
-- Custom nonlinear dynamic modeling
+- Control System Toolbox
+- Fuzzy Logic Toolbox
+- Optimization Toolbox
 
 ---
-
 
 ## ⭐️ If you found this helpful...
 
